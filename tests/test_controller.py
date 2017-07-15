@@ -1,5 +1,6 @@
 from sniper.tests import TestApp, TestCase, TestClient
 from sniper.url import url
+
 from sniper_jinja.controllers import JinjaController
 
 
