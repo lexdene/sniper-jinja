@@ -1,0 +1,14 @@
+language: python
+python:
+  - "3.6"
+  - "nightly"
+install:
+  - pip install -q sniper Jinja2
+  - pip install -q flake8 isort
+script:
+  - python -m unittest discover -v tests/ 'test_*.py'
+  - flake8 .
+  - isort --check-only --recursive .
+matrix:
+  allow_failures:
+    - python: nightly
