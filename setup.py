@@ -14,6 +14,10 @@ setup(
     author_email="lexdene@gmail.com",
     packages=['sniper_jinja'],
     platforms=['any'],
+    install_requires=[
+        'sniper',
+        'Jinja2',
+    ],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
@@ -21,7 +25,6 @@ setup(
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Topic :: Internet :: WWW/HTTP',
     ],
