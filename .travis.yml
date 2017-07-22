@@ -3,8 +3,7 @@ python:
   - "3.6"
   - "nightly"
 install:
-  - pip install -q sniper Jinja2
-  - pip install -q flake8 isort
+  - pip install -q -r pip-req.d/install.txt -r pip-req.d/test.txt
 script:
   - python -m unittest discover -v tests/ 'test_*.py'
   - flake8 .

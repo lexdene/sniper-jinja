@@ -3,9 +3,25 @@ from setuptools import setup
 with open('README.rst') as f:
     LONG_DESCRIPTION = f.read()
 
+with open('pip-req.d/install.txt') as f:
+    install_requires = []
+
+    for line in f:
+        if '#' in line:
+            # remove comment
+            line = line[:line.index('#')]
+
+        line = line.strip()
+
+        if line:
+            install_requires.append(line)
+
+    print(install_requires)
+
+
 setup(
     name="sniper_jinja",
-    version="0.0.1",
+    version="0.0.2",
     description="a jinja2 plugin for sniper",
     long_description=LONG_DESCRIPTION,
     url="https://github.com/lexdene/sniper-jinja",
@@ -14,10 +30,7 @@ setup(
     author_email="lexdene@gmail.com",
     packages=['sniper_jinja'],
     platforms=['any'],
-    install_requires=[
-        'sniper',
-        'Jinja2',
-    ],
+    install_requires=install_requires,
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
