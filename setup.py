@@ -20,7 +20,7 @@ with open('pip-req.d/install.txt') as f:
 
 
 setup(
-    name="sniper_jinja",
+    name="sniper-jinja",
     version="0.0.2",
     description="a jinja2 plugin for sniper",
     long_description=LONG_DESCRIPTION,
