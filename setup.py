@@ -16,12 +16,10 @@ with open('pip-req.d/install.txt') as f:
         if line:
             install_requires.append(line)
 
-    print(install_requires)
-
 
 setup(
     name="sniper-jinja",
-    version="0.0.2",
+    version="0.0.3",
     description="a jinja2 plugin for sniper",
     long_description=LONG_DESCRIPTION,
     url="https://github.com/lexdene/sniper-jinja",
